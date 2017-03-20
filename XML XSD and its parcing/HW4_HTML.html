@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<table id="demo" border ="1"> </table>
+
+<script language="javascript">
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+	alert(this.responseXML);
+  if (this.readyState == 4 && this.status == 200) {
+	  alert("YO");
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "HW4.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+	alert("got it");
+}
+</script>
+
+</body>
+</html>

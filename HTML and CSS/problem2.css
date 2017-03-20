@@ -1,0 +1,97 @@
+table {
+    width:1200px;
+    border-collapse: collapse;
+       
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	
+}
+
+#row1 {
+	background-color:gainsboro;
+}
+
+#div1 {
+    position:relative;
+    border: 2px solid black;
+    padding: 30px;
+    width: 500px;
+    height: 100px;
+    left : 200px;
+}
+
+
+#div2 {
+    position:relative;
+    border: 2px solid black;
+    padding: 30px;
+    width: 500px;
+    height: 100px;
+    left : 200px;
+}
+
+#combine{
+	width: 400px;
+	height: 2px;
+	
+}
+
+#no1{
+    border: 2px solid black;
+	position: relative;
+    background: yellow;
+    padding: 25px;
+    width: 200px;
+    height: 1px;
+    left: 8px;
+    float: left;
+}
+
+#no2{
+    position:relative;
+    border: 2px solid black;
+    padding: 25px;
+    width: 50px;
+    height: 1px;
+    margin-left : 260px;
+    
+}
+
+#no3{
+    position:relative;
+    border: 2px solid black;
+    padding: 10px;
+    width: 231px;
+    height: 30px;
+    left : 9px;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+   
+}
+#no4 {
+	border: 2px solid black;
+	position: relative;
+    background: yellow;
+    padding: 30px;
+    width: 230px;
+    height: 5px;
+    text-decoration: underline;
+    left: 70px;
+
+}
+
+#no5{
+    border: 2px; 
+    position:relative;
+    border-style: dashed;
+    width: 30px;
+    left: 7px;
+    
+}
+

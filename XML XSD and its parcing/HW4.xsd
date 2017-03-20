@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="ProductName">
+	<xsd:simpleType>
+	    <xsd:restriction base="xsd:string">
+	     	 <xsd:pattern value="[A-Z][a-zA-Z0-9]*(\s[a-zA-Z0-9]*)*"/>
+	    </xsd:restriction>
+	 </xsd:simpleType>
+</xsd:element>
+<xsd:element name="ProductDescription">
+	<xsd:simpleType>
+	    <xsd:restriction base="xsd:string">
+	     	 <xsd:pattern value="[A-Z][a-zA-Z0-9]*(\s[a-zA-Z0-9]*)*"/>
+	    </xsd:restriction>
+	 </xsd:simpleType>
+</xsd:element>
+<xsd:element name="ReleaseDate" type="xsd:date"/>
+<xsd:element name="ProductCost">
+  <xsd:complexType>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:double">
+        <xsd:attribute name="currency" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="CompanyName">
+	<xsd:simpleType>
+	    <xsd:restriction base="xsd:string">
+	     	 <xsd:pattern value="[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*)*"/>
+	    </xsd:restriction>
+	 </xsd:simpleType>
+</xsd:element>
+<xsd:element name="CompanyAddress">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="StreetName">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]*\_[A-Z][a-z]*(\s[A-Z][a-zA-Z]*)*"/>
+					</xsd:restriction>
+  				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="City">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[A-Z](([a-z])*)"/>
+					</xsd:restriction>
+  				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="ZipCode">
+				<xsd:simpleType > 
+					<xsd:restriction base="xsd:integer">
+						<xsd:minExclusive value="11111"/>
+						<xsd:maxInclusive value="99999"/> 
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Country">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="([A-Z])*"/>
+					</xsd:restriction>
+  				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Company">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="CompanyName"/>
+			<xsd:element ref="CompanyAddress"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="Product">
+	<xsd:complexType>
+		<xsd:sequence>	
+			<xsd:element ref="ProductName"/>
+			<xsd:element ref="ProductDescription"/>
+			<xsd:element ref="ReleaseDate"/>
+			<xsd:element ref="ProductCost"/>
+			<xsd:element ref="Company"/>
+		</xsd:sequence>				
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="root">
+	<xsd:complexType>
+        <xsd:sequence>
+		<xsd:element ref="Product"  maxOccurs="10"/>
+        </xsd:sequence>	
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,68 @@
+#header{
+	text-align: center;
+}
+
+#interests_field {
+	vertical-align:top;
+	margin-right:10px;
+}
+
+#education{
+	background: white;
+}
+
+#contactMe{
+	width:100%;
+}
+
+#img_myself.image{
+	margin-left:200px;
+}
+
+#img_myself.images{
+	margin-left:10px;
+}
+
+
+.container {
+    width: 80%;
+    padding: 10px;
+}
+.one {
+    width: 50%;
+    float: left;
+	background: #D3D1D7;
+	margin-right: 50px;
+}
+.two {
+    margin-left: 50px;
+}
+
+table.courses,
+table.courses th,
+table.courses td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.courses th,
+table.courses td {
+    padding: 5px;
+    text-align: left;
+}
+
+table{
+	margin-top:10px;
+}
+
+#footer_right {
+	text-align:right;
+	margin-right:20px;
+	margin-top:10px;
+}
+
+
+section{
+	margin-top:30px;
+	margin-left:20px;
+}
